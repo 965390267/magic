@@ -1,0 +1,869 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+ <!-- 分享显示的标题-->  
+        <meta itemprop="name" content="考前增运符，专治考前衰神附体" />  
+          
+        <!-- 分享显示的缩略图-->  
+        <meta itemprop="image" content="http://magic.91yunshi.com/img/girl.png" />  
+          
+        <!-- 分享显示的简介-->  
+        <meta name="description" itemprop="description" content="凡得此符者考运大增，出题全会蒙题全对，戳我制符(^_−)☆" /> 
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="full-screen" content="yes">
+    <meta name="screen-orientation" content="portrait">
+    <meta name="apple-mobile-web-app-capable"content="yes">
+<meta name="browsermode" content="application">
+<meta name="x5-orientation" content="portrait">
+<meta name="x5-fullscreen" content="true">
+<meta name="x5-page-mode" content="app">
+<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no,minimal-ui">
+    <title>制作「考试增运符」</title>
+    <style>
+    html{
+       height: 100%;
+      
+        font-size: 50px;
+/* overflow: hidden; */
+    }
+    body{
+        height: 100%;
+        /* overflow: hidden; */
+        overflow: auto;
+  -webkit-overflow-scrolling: touch;
+    }
+    *{
+        -webkit-touch-callout:none; /*系统默认菜单被禁用*/
+  -webkit-user-select:none; /*webkit浏览器*/
+  -khtml-user-select:none; /*早期浏览器*/
+  -moz-user-select:none;/*火狐*/
+  -ms-user-select:none; /*IE10*/
+  user-select:none;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);  -webkit-tap-highlight-color:transparent;
+    }
+    .container{
+        position: absolute;
+        left:0;
+        top:0;
+        z-index: -99;
+        height: 100%;
+        width: 100%;
+     
+  overflow: auto;
+        background: url('./img/beijing.png'),#1E1C73;
+        background-size: 100% 100%;
+    }
+    body,div{
+        margin: 0;
+        padding: 0;
+    }
+    .title{
+        height: 2.2rem;
+    background-image: url(./img/title.png);
+    background-size: 116% 140%;
+    /* background-repeat: no-repeat; */
+    background-position: center;
+    }
+    .fu{
+        position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+    margin-top: -0.5rem;
+    height: 6.6rem;
+    background-image: url(./img/fu.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 6.6rem;
+    z-index: -99;
+    }
+    .rotateimg{
+        position: relative;
+    z-index: -999;
+    margin: 0 auto;
+    margin-top: 1rem;
+    margin-left: 0.7rem;
+    height: 5.5rem;
+    background-image: url(./img/rotate.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    /* background-position: 0.1rem -0.8rem; */
+    width: 5.6rem;
+    -webkit-animation: rotate 8s linear 0s infinite;
+}
+
+
+    .girls{
+        position: absolute;
+    top: 2.5rem;
+    left: 2.3rem;
+    /* margin: 0 auto; */
+    height: 2.0rem;
+    /* background-image: url(./img/girlleft.png); */
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    /* background-position: 0.2rem 0.4rem; */
+    width: 2.0rem;
+    animation: girls 2s linear 1s infinite;
+    -webkit-animation: girls 2s linear 1s infinite;
+    /* -webkit-animation-direction: alternate; */
+}
+    #canvasbox{
+        /* position: relative;  */
+        margin: 0 auto;
+    margin-top: -1.5rem;
+    height: 4rem;
+    background-image: url(./img/write.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    /* background-position: 0.3rem 0; */
+    width: 7.3rem;
+    overflow: hidden;
+}
+    #submit{
+        /* position: absolute;
+    bottom: 0px;
+    left: 1.2rem; */
+    margin: 0 auto;
+
+    height: 1rem;
+    background-image: url(./img/btn.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    /* background-position: 0.3rem 0; */
+    width: 5.2rem;
+    
+    }
+    h4{
+        position: absolute;
+    top: 8.5rem;
+    color: #555;
+    left: 50%;
+font-size:16px;
+   transform: translateX(-50%);
+-ms-transform: translateX(-50%);
+-moz-transform: translateX(-50%);
+-webkit-transform: translateX(-50%);
+-o-transform: translateX(-50%);
+    }
+    canvas{
+        position: relative;
+    left: 1.4rem;
+    top: 0.8rem;
+    }
+    @-webkit-keyframes rotate{
+        0%{
+            transform: rotateZ(0deg)
+        }
+        50%{
+            transform: rotateZ(180deg)
+        }
+        100%{
+            transform: rotateZ(360deg)
+        }
+    }
+    @-o-keyframes rotate{
+        0%{
+            transform: rotateZ(0deg)
+        }
+        50%{
+            transform: rotateZ(180deg)
+        }
+        100%{
+            transform: rotateZ(360deg)
+        }
+    }
+    @-moz-keyframes rotate{
+        0%{
+            transform: rotateZ(0deg)
+        }
+        50%{
+            transform: rotateZ(180deg)
+        }
+        100%{
+            transform: rotateZ(360deg)
+        }
+    }
+    @-webkit-keyframes girls{
+        0%{
+            background-image: url(./img/girlleft.png);
+            /* transform: rotateX(-5px) */
+        }
+        /* 75%{
+            background-image: url(./img/girlleft.png);
+          
+        } */
+       
+        100%{
+            background-image: url(./img/girlright.png);
+            /* transform: rotateX(0px) */
+        }
+    }
+    @-o-keyframes girls{
+        0%{
+            background-image: url(./img/girlleft.png);
+            /* transform: rotateX(-5px) */
+        }
+        /* 75%{
+            background-image: url(./img/girlleft.png);
+          
+        } */
+       
+        100%{
+            background-image: url(./img/girlright.png);
+            /* transform: rotateX(0px) */
+        }
+    }
+    @-moz-keyframes girls{
+        0%{
+            background-image: url(./img/girlleft.png);
+            /* transform: rotateX(-5px) */
+        }
+        /* 75%{
+            background-image: url(./img/girlleft.png);
+          
+        } */
+       
+        100%{
+            background-image: url(./img/girlright.png);
+            /* transform: rotateX(0px) */
+        }
+    }
+/*第二页样式*/
+
+         #bg{
+             display: none;
+         height:100%;
+         background:#EEE93A;
+     }
+        .yscode {
+            position: absolute;
+            bottom: 55px;
+            left: 50%;
+            opacity: 0;
+            transform: translateX(-50%);
+            z-index: 999;
+        }
+#nameimg{
+ display: none;
+    height: 100%;
+    width: 100%;
+}
+        #bgcanvas {
+            display: none;
+            /* opacity: 0; */
+        }
+    </style>
+    <script type="text/javascript">
+        // Traffic Stats of the entire Web site By baidu
+
+        (function() {
+            var hm = document.createElement("script");
+            hm.type='text/javascript';
+            hm.async=true;
+            hm.src = "https://s19.cnzz.com/z_stat.php?id=1273998340&web_id=1273998340&async=1";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+        // Traffic Stats of the entire Web site By baidu end
+    </script>
+    
+    <script>
+            //声明_czc对象:
+            var _czc = _czc || [];
+      
+            _czc.push(["_trackEvent", "云师抽符", "提交", "点击次数", 1, "submit"]);
+            </script>
+                   <!-- <script src="https://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script> -->
+                   <!-- <script src="https://cdn.bootcss.com/jquery/3.3.1/core.js"></script> -->
+                
+   
+ <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"> </script>
+<script type="text/javascript" src="http://qzonestyle.gtimg.cn/qzone/qzact/common/share/share.js"></script>
+ <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+ <script>
+var myurl = location.href.split('#')[0];
+myurl = encodeURIComponent(myurl);
+ $.ajax({
+        url: 'http://magic.91yunshi.com/magic/sign?url='+myurl,
+        data:{
+            // url:encodeURI(location.href.split('#')[0])
+        },
+        success:function(data){
+          var data=  JSON.parse(data) 
+            // console.log(data)
+            wx.config({
+                debug: false,
+                appId: 'wxc40a603712f455e0',
+                timestamp: data.timestamp,
+                nonceStr: data.nonceStr,
+                signature: data.signature,
+                jsApiList: [
+                    'onMenuShareTimeline',
+                    'onMenuShareAppMessage',
+                    'hideMenuItems',
+                    'showMenuItems'
+                ]
+            });
+
+
+     setShareInfo({
+         title:          '考前增运符，专治考前衰神附体',
+         summary:        '凡得此符者考运大增，出题全会蒙题全对，戳我制符(^_−)☆',
+         pic:            'http://magic.91yunshi.com/img/girl.png',
+         url:            'http://magic.91yunshi.com/ysindex.html',
+         WXconfig:       {
+             swapTitleInWX: true,
+             appId: 'wxc40a603712f455e0',
+             timestamp: data.timestamp,
+                nonceStr: data.nonceStr,
+                signature: data.signature,
+         }
+     });
+
+
+
+        },
+        error:function(data){
+            console.error(data);
+        }
+    });
+    var shareConfig = {
+                   title: '考前增运符，专治考前衰神附体', // 分享标题
+                    desc: "凡得此符者考运大增，出题全会蒙题全对，戳我制符(^_−)☆", // 分享描述
+                    link: "http://magic.91yunshi.com/index.html",
+                    imgUrl: "http://magic.91yunshi.com/img/girl.png", // 分享图标
+                  
+
+            };
+
+            wx.ready(function () {
+                wx.checkJsApi({
+                    jsApiList: [
+                    "onMenuShareTimeline", //分享给好友 
+                     "onMenuShareAppMessage", //分享到朋友圈 
+                     "onMenuShareQQ", //分享到QQ 
+                     "onMenuShareWeibo" //分享到微博 
+                    ],
+                    success: function (res) {
+                    }
+                });
+                wx.onMenuShareAppMessage(shareConfig);
+           wx.onMenuShareTimeline(shareConfig);
+           wx.onMenuShareQQ(shareConfig);
+           wx.onMenuShareWeibo(shareConfig);
+
+            });
+            // wx.showOptionMenu();
+
+</script>
+
+     
+</head>
+<body >
+
+        <div class="container"> 
+        </div>
+        <div class="title"></div>
+        <div class="fu"> <div class="rotateimg"></div><div class="girls"></div></div>
+       
+        <div id="canvasbox"><h4>签名抽取专属灵符</h4></div>
+        <div id="submit"></div>
+   
+        <div id='bg'>
+
+            <canvas id="bgcanvas">
+            </canvas>
+            <img id='nameimg' src=''>
+            <!-- <img class="yscode" src='./img/yscode.png'> -->
+        </div>
+    </body>
+        
+    
+<script src='./js/flex.js'>
+</script>
+<script language="javascript">
+
+        document.body.removeEventListener('touchstart', function (e) {
+  e.preventDefault(); //阻止默认的处理方式(阻止下拉滑动的效果)
+}, {passive: true}); //passive 参数不能省略，用来兼容ios和android
+window.onpageshow=function(e){
+if(e.persisted){
+    window.location.reload()
+}
+}
+
+
+var needRefresh = localStorage.getItem("need-refresh");
+    if(needRefresh){
+        localStorage.removeItem("need-refresh");
+        location.reload();
+    }
+
+var isclick=false;
+    function onDocumentTouchStart( event ) {
+    
+    
+    
+        if( event.touches.length == 1 ) {
+    
+    
+    
+            event.preventDefault();
+    
+    
+    
+            // Faking double click for touch devices
+    
+    
+    
+            var now = new Date().getTime();
+    
+    
+    
+            if ( now - timeOfLastTouch  < 250 ) {
+    
+    
+    
+                reset();
+    
+                return;
+    
+            }
+    
+    
+    
+            timeOfLastTouch = now;
+    
+    
+    
+            mouseX = event.touches[ 0 ].pageX;
+    
+            mouseY = event.touches[ 0 ].pageY;
+    
+            isMouseDown = true;
+    
+        }
+    
+    }
+    
+    
+    
+    function onDocumentTouchMove( event ) {
+    
+    
+    
+        if ( event.touches.length == 1 ) {
+    
+    
+    
+            event.preventDefault();
+    
+    
+    
+            mouseX = event.touches[ 0 ].pageX;
+    
+            mouseY = event.touches[ 0 ].pageY;
+    
+    
+    
+        }
+    
+    
+    
+    }
+    
+    
+    
+    function onDocumentTouchEnd( event ) {
+    
+    
+    
+        if ( event.touches.length == 0 ) {
+    
+    
+    
+            event.preventDefault();
+    
+            isMouseDown = false;
+    
+    
+    
+        }
+    
+    
+    
+    }
+    
+    var canvasDiv = document.getElementById('canvasbox');
+    
+    var canvas = document.createElement('canvas');
+    
+    
+    
+    
+    
+    var node=document.getElementById('canvasbox')
+      
+    var canvasWidth = parseInt( window.getComputedStyle(node,null).width)-120 ;
+    
+    var canvasHeight=parseInt(window.getComputedStyle(node,null).height)-60; 
+    
+    
+    
+     
+    
+        document.addEventListener( 'touchmove', onDocumentTouchMove, false );
+    
+       
+    
+    var point = {};
+    
+    point.notFirst = false;
+    
+    
+    
+    
+    
+    canvas.setAttribute('width', canvasWidth);
+    
+    canvas.setAttribute('height', canvasHeight);
+    
+    canvas.setAttribute('id', 'canvas');
+    
+    canvasDiv.appendChild(canvas);
+    
+    
+    
+    if(typeof G_vmlCanvasManager != 'undefined') {
+    
+    
+    
+        canvas = G_vmlCanvasManager.initElement(canvas);
+    
+    }
+    
+    
+    
+    
+    
+    var context = canvas.getContext("2d");
+    
+
+    
+    
+    
+    canvas.addEventListener("touchstart", function(e){
+        document.body.addEventListener('touchmove', function (e) {
+  e.preventDefault(); //阻止默认的处理方式(阻止下拉滑动的效果)
+}, {passive: false}); //passive 参数不能省略，用来兼容ios和android
+        isclick=true;
+        document.getElementsByTagName('h4')[0].style.display='none';
+    
+      var mouseX = e.changedTouches[0].pageX - this.offsetLeft;
+    
+      var mouseY = e.changedTouches[0].pageY - this.offsetTop;
+    
+      paint = true;
+    
+      addClick(e.changedTouches[0].pageX - this.offsetLeft, e.changedTouches[0].pageY - this.offsetTop);
+    
+      redraw();
+    
+    });
+    
+    
+    
+    canvas.addEventListener("touchend", function(e){
+    
+       paint = false;
+    
+    });
+    
+    
+    
+    canvas.addEventListener("touchmove", function(e){
+    
+     if(paint){
+    
+        addClick(e.changedTouches[0].pageX - this.offsetLeft, e.changedTouches[0].pageY - this.offsetTop, true);
+    
+        redraw();
+    
+      }
+    
+    });
+    
+    
+    
+    
+    
+    
+    
+    canvas.addEventListener("mousedown", function(e){
+    
+      var mouseX = e.pageX - this.offsetLeft;
+    
+      var mouseY = e.pageY - this.offsetTop;
+    
+      paint = true;
+    
+      addClick(e.pageX - this.offsetLeft, e.pageY - this.offsetTop);
+    
+      redraw();
+    
+    });
+    
+    
+    
+    canvas.addEventListener("mousemove", function(e){
+    
+      if(paint){
+    
+        addClick(e.pageX - this.offsetLeft, e.pageY - this.offsetTop, true);
+    
+        redraw();
+    
+      }
+    
+    });
+    
+    
+    
+    canvas.addEventListener("mouseup", function(e){
+    
+      paint = false;
+    
+    });
+    
+    
+    
+    canvas.addEventListener("mouseleave", function(e){
+    
+      paint = false;
+    
+    });
+    
+    
+    
+    var clickX = new Array();
+    
+    var clickY = new Array();
+    
+    var clickDrag = new Array();
+    
+    var paint;
+    
+    
+    
+    function addClick(x, y, dragging)
+    
+    {
+    
+      clickX.push(x);
+    
+      clickY.push(y);
+    
+      clickDrag.push(dragging);
+    
+    }
+    
+    
+    
+    function redraw(){
+    
+      //canvas.width = canvas.width; // Clears the canvas
+    
+      
+    
+      context.strokeStyle = "#791900";
+    
+      context.lineJoin = "round";
+    
+      context.lineWidth = 2;
+    
+      
+    
+      while (clickX.length > 0 ) {
+    
+          point.bx = point.x;
+    
+          point.by = point.y;
+    
+          point.x = clickX.pop();
+    
+          point.y = clickY.pop();
+    
+          point.drag = clickDrag.pop();
+    
+          context.beginPath();
+    
+          if (point.drag && point.notFirst) {
+    
+              context.moveTo(point.bx, point.by);
+    
+          } else {
+    
+              point.notFirst = true;
+    
+              context.moveTo(point.x - 1, point.y);
+    
+          }
+    
+         context.lineTo(point.x, point.y);
+    
+         context.closePath();
+    
+         context.stroke();
+    
+      }
+    
+
+    
+    }
+    
+   
+    
+    var submit = document.getElementById("submit");
+    
+   
+    
+    
+    submit.onclick=function(e){
+     
+        localStorage.setItem('throughshowpage',1);
+     var imgbg=canvas.toDataURL("image/png");
+       
+    window.localStorage.setItem('nameimg',imgbg);
+    if(isclick){
+        // window.location.href='./fu.html';
+        // e.preventDefault();
+        // document.getElementById('firstpage').style.display='none';
+
+      document.getElementsByClassName('container')[0].style.display='none';
+      document.getElementsByClassName('title')[0].style.display='none';
+      document.getElementsByClassName('fu')[0].style.display='none';
+      document.getElementById('canvasbox').style.display='none';
+      document.getElementById('submit').style.display='none';
+     
+
+
+        var imgarr = [
+            "./ysfubg/1.png",
+            "./ysfubg/2.png",
+            "./ysfubg/3.png",
+            "./ysfubg/4.png",
+            "./ysfubg/5.png",
+            "./ysfubg/6.png",
+            "./ysfubg/7.png",
+            "./ysfubg/8.png",
+            "./ysfubg/9.png",
+            // "./fubg/a10.png",
+            // "./fubg/a11.png",
+            // "./fubg/a12.png",
+            // "./fubg/a13.png",
+            // "./fubg/a14.png",
+            // "./fubg/a15.png",
+            // "./fubg/a16.png"
+        ];
+        //a1.png
+    
+        var random = function () {
+            return Math.floor(Math.random() * imgarr.length);
+        }
+    
+    
+        var getbg = document.getElementById('bg');
+
+        
+    
+    
+    
+        var canvasWidth = parseInt(window.innerWidth);
+    
+        var canvasHeight = parseInt(window.innerHeight);
+    
+        // getbg.style.cssText = 'background:url(' + finalResult+ '),#EEE93A;background-repeat: no-repeat;background-size: 100% 100%';
+    
+      var bgcanvas = document.getElementById('bgcanvas');
+                   
+                    bgcanvas.setAttribute('width', canvasWidth*2);
+                    bgcanvas.style.width=canvasWidth+'px';
+                    bgcanvas.style.height=canvasHeight+'px';
+                    bgcanvas.setAttribute('height', canvasHeight*2);
+                    var context = bgcanvas.getContext('2d');
+                   context.scale(2, 2);
+        bgisload();
+    
+        function bgisload() {
+            var imgurl = imgarr[random()];//随机获取背景符的地址
+            var bgload = new Image();
+            bgload.src = imgurl;
+            bgload.width = canvasWidth;
+            bgload.height = canvasHeight;
+    
+            // bgload.setAttribute('crossorigin', 'anonymous');
+    
+            getbg.style.cssText = ' display:block;background:#EEE93A';
+    
+            bgload.onload = function () {
+    
+                // 这是加载本地图像
+                var localbase64url = localStorage.getItem('nameimg');
+                var localImg = new Image();
+                localImg.src = localbase64url;
+                localImg.width=140;
+                localImg.height=80;
+                // localImg.setAttribute('crossorigin', 'anonymous');
+    
+                // 绘制
+                localImg.onload = function (e) {
+    
+                  
+    
+    
+                    context.drawImage(bgload, 0, 0, canvasWidth, canvasHeight);
+    
+                    context.drawImage(localImg, canvasWidth/2-70, canvasWidth/2.8, 140, 80);
+    
+                    var finalResult = bgcanvas.toDataURL('image/jpeg', 1);
+                    document.getElementById('nameimg').src = finalResult;
+                      document.getElementById('nameimg').style.display='block';
+    
+                }
+    
+            }
+            
+           
+    
+        }
+
+
+    }else{
+        return alert('亲，您还未签名呦QAQ')
+    }
+    canvas=null;
+        
+    
+    }
+  
+ 
+    </script>
+ <script>
+  
+    //     document.body.addEventListener('touchmove', function (e) {
+    //         e.preventDefault(); //阻止默认的处理方式(阻止下拉滑动的效果)
+    //     }, { passive: false }); //passive 参数不能省略，用来兼容ios和android
+    //     window.onpageshow=function(e){
+    // if(e.persisted){
+    //     window.location.reload()
+    // }
+    // }
+    //     localStorage.setItem("need-refresh", true);
+    
+    
+    </script>
+ 
+</html>
